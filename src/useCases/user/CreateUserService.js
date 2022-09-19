@@ -8,7 +8,7 @@ class CreateUserService{
       const userRepository = new UserRepository();
       
       if(!name || !email || !password){
-         throw new Error('Data required');
+         throw new Error('All datas required');
       }
 
       const findByEmail = await userRepository.findByEmail(email)
